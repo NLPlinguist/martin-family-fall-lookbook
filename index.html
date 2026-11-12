@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Family Thanksgiving Lookbook — Ralph Lauren Fall 2026 Palette</title>
-<meta name="description" content="A family photo lookbook built around the Ralph Lauren Fall 2026 palette, with shopping links for every color, age range, and budget.">
+<meta name="description" content="A family photo lookbook built around the Ralph Lauren Fall 2026 palette, with real shopping links for every color and age range.">
 <style>
 :root {
   --ink: #2B1E17;
@@ -65,7 +65,6 @@ section > h2 { font-size: 2rem; margin-bottom: 8px; }
 }
 .palette-group { margin-bottom: 28px; }
 .palette-group h3 { font-size: 1.5rem; margin-bottom: 4px; }
-.palette-desc { color: #5A4A3D; margin: 0 0 14px; }
 .swatch-row { display: flex; flex-wrap: wrap; gap: 12px; }
 .swatch-card {
   background: var(--card); border: 1px solid var(--line); border-radius: 10px;
@@ -84,20 +83,28 @@ section > h2 { font-size: 2rem; margin-bottom: 8px; }
 .big-swatch { width: 44px; height: 44px; border-radius: 10px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.15); }
 .color-card h4 { font-size: 1.35rem; }
 .color-card .hex { font-size: .85rem; color: #7A6A5A; }
+.vibe { color: #5A4A3D; margin: 0 0 14px; font-size: .95rem; max-width: 720px; }
 .age-row {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
-  padding: 10px 0; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: flex-start; gap: 14px;
+  padding: 12px 0; border-top: 1px solid var(--line);
 }
-.age-info { flex: 0 0 160px; }
+.age-info { flex: 0 0 150px; }
 .age-label { display: block; font-weight: 600; font-size: .95rem; }
-.item-type { display: block; font-size: .8rem; color: #7A6A5A; }
-.age-links { display: flex; gap: 10px; flex-wrap: wrap; }
-.btn {
-  display: inline-block; padding: 7px 14px; border-radius: 999px;
-  font-size: .85rem; text-decoration: none; font-weight: 600;
+.items { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.item-row { display: flex; align-items: center; gap: 14px; }
+.item-thumb img {
+  width: 64px; height: 64px; object-fit: cover; border-radius: 10px;
+  border: 1px solid var(--line); display: block;
 }
-.btn.premium { background: var(--ink); color: #F0E5D1; }
-.btn.dupe { background: #fff; color: var(--ink); border: 1px solid var(--gold); }
+.item-thumb.swatch-thumb { width: 64px; height: 64px; border-radius: 10px; border: 1px solid var(--line); display: block; }
+.item-body { display: flex; flex-direction: column; gap: 4px; }
+.item-tier { font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: #9A7A5A; font-weight: 700; }
+.item-name { font-size: .92rem; }
+.btn.buy {
+  display: inline-block; padding: 6px 14px; border-radius: 999px;
+  font-size: .82rem; text-decoration: none; font-weight: 600;
+  background: var(--ink); color: #F0E5D1; align-self: flex-start;
+}
 .tips li { margin-bottom: 8px; }
 footer {
   border-top: 1px solid var(--line); padding: 24px 20px 40px; text-align: center;
@@ -105,13 +112,14 @@ footer {
 }
 @media (max-width: 600px) {
   .age-info { flex-basis: 100%; }
+  .item-thumb img, .item-thumb.swatch-thumb { width: 52px; height: 52px; }
 }
 </style>
 </head>
 <body>
 <header class="site-header">
   <h1>The Family Thanksgiving Lookbook</h1>
-  <p class="sub">A coordinated family photo guide built around the Ralph Lauren Fall 2026 color palette — with a designer pick and an affordable dupe for every color, every age range.</p>
+  <p class="sub">A coordinated family photo guide built around the Ralph Lauren Fall 2026 color palette — with real, verified shopping links for every color, age range, and budget.</p>
   <nav class="toc">
     <a href="#overview">Overview</a>
     <a href="#palette">The Palette</a>
@@ -123,9 +131,9 @@ footer {
 <section id="overview">
   <h2>Overview</h2>
   <div class="frame">
-    <img src="images/lookbook-hero.jpg" alt="Your generated Thanksgiving lookbook image"
+    <img src="images/lookbook-hero.jpg" alt="Martin family Thanksgiving lookbook"
          onerror="this.style.display='none';document.getElementById('heroFallback').style.display='flex';">
-    <div class="fallback" id="heroFallback"><span>Add your generated lookbook image at <strong>images/lookbook-hero.jpg</strong> — the colorful backdrop behind this note is the full 2026 palette.</span></div>
+    <div class="fallback" id="heroFallback"><span>Lookbook image coming soon.</span></div>
   </div>
   <p class="section-intro" style="margin-top:20px">
     This lookbook gives our family one shared palette for Thanksgiving photos: babies, toddlers,
@@ -141,24 +149,1016 @@ footer {
     Each swatch shows its exact hex code so we can match outfits and backdrops precisely.
   </p>
   <div class="frame">
-    <img src="images/palette-chart.jpg" alt="Your generated color palette chart"
+    <img src="images/palette-chart.jpg" alt="Ralph Lauren Fall 2026 color palette"
          onerror="this.style.display='none';document.getElementById('paletteFallback').style.display='flex';">
-    <div class="fallback" id="paletteFallback"><span>Add your generated palette chart at <strong>images/palette-chart.jpg</strong>.</span></div>
+    <div class="fallback" id="paletteFallback"><span>Palette chart coming soon.</span></div>
   </div>
   <div style="margin-top:24px">
-    <div class="palette-group"><h3>The Earthy Monochrome</h3><p class="palette-desc">Grounded, earthy tones — the backbone of the 2026 Thanksgiving palette. Espresso to Tan: warm, cozy, camera-friendly. This is where most of the family's outfits will live.</p><div class="swatch-row"><div class="swatch-card"><span class="swatch" style="background:#2B1E17"></span><div class="swatch-meta"><span class="swatch-name">Espresso</span><span class="swatch-hex">#2B1E17</span></div></div><div class="swatch-card"><span class="swatch" style="background:#533E2D"></span><div class="swatch-meta"><span class="swatch-name">Tobacco</span><span class="swatch-hex">#533E2D</span></div></div><div class="swatch-card"><span class="swatch" style="background:#7A5135"></span><div class="swatch-meta"><span class="swatch-name">Chestnut</span><span class="swatch-hex">#7A5135</span></div></div><div class="swatch-card"><span class="swatch" style="background:#B58348"></span><div class="swatch-meta"><span class="swatch-name">Ochre</span><span class="swatch-hex">#B58348</span></div></div><div class="swatch-card"><span class="swatch" style="background:#D2B48C"></span><div class="swatch-meta"><span class="swatch-name">Tan</span><span class="swatch-hex">#D2B48C</span></div></div></div></div><div class="palette-group"><h3>Rich Fall Accents</h3><p class="palette-desc">Deep, dramatic hues for pop and contrast. Merlot, olive, navy, auburn and forest green — perfect for grandparents, parents, and anyone who wants a richer tone in the group shots.</p><div class="swatch-row"><div class="swatch-card"><span class="swatch" style="background:#3B131E"></span><div class="swatch-meta"><span class="swatch-name">Midnight Merlot</span><span class="swatch-hex">#3B131E</span></div></div><div class="swatch-card"><span class="swatch" style="background:#3D3A21"></span><div class="swatch-meta"><span class="swatch-name">Harvest Olive</span><span class="swatch-hex">#3D3A21</span></div></div><div class="swatch-card"><span class="swatch" style="background:#131E29"></span><div class="swatch-meta"><span class="swatch-name">Hunter Navy</span><span class="swatch-hex">#131E29</span></div></div><div class="swatch-card"><span class="swatch" style="background:#6B2B20"></span><div class="swatch-meta"><span class="swatch-name">Auburn</span><span class="swatch-hex">#6B2B20</span></div></div><div class="swatch-card"><span class="swatch" style="background:#1D2C22"></span><div class="swatch-meta"><span class="swatch-name">Forest Green</span><span class="swatch-hex">#1D2C22</span></div></div></div></div><div class="palette-group"><h3>Metallic &amp; Luxe Highlights</h3><p class="palette-desc">Shimmering metallics for festive detail. Use these on accessories — scarves, hats, buttons, cardigans — so they sparkle in photos without overpowering the group.</p><div class="swatch-row"><div class="swatch-card"><span class="swatch" style="background:#B5944B"></span><div class="swatch-meta"><span class="swatch-name">Antique Gold</span><span class="swatch-hex">#B5944B</span></div></div><div class="swatch-card"><span class="swatch" style="background:#A8A9AD"></span><div class="swatch-meta"><span class="swatch-name">Shimmering Silver</span><span class="swatch-hex">#A8A9AD</span></div></div><div class="swatch-card"><span class="swatch" style="background:#7A5F3A"></span><div class="swatch-meta"><span class="swatch-name">Burnished Bronze</span><span class="swatch-hex">#7A5F3A</span></div></div><div class="swatch-card"><span class="swatch" style="background:#E5D2B3"></span><div class="swatch-meta"><span class="swatch-name">Champagne</span><span class="swatch-hex">#E5D2B3</span></div></div><div class="swatch-card"><span class="swatch" style="background:#686C6F"></span><div class="swatch-meta"><span class="swatch-name">Soft Pewter</span><span class="swatch-hex">#686C6F</span></div></div></div></div><div class="palette-group"><h3>Neutral Bases &amp; Vintage Undertones</h3><p class="palette-desc">Soft neutrals and vintage-tinged bases that tie everything together. Creams, sands and grays are the easiest colors to mix across generations.</p><div class="swatch-row"><div class="swatch-card"><span class="swatch" style="background:#F0E5D1"></span><div class="swatch-meta"><span class="swatch-name">Warm Cream</span><span class="swatch-hex">#F0E5D1</span></div></div><div class="swatch-card"><span class="swatch" style="background:#C2B280"></span><div class="swatch-meta"><span class="swatch-name">Desert Sand</span><span class="swatch-hex">#C2B280</span></div></div><div class="swatch-card"><span class="swatch" style="background:#8B4513"></span><div class="swatch-meta"><span class="swatch-name">Vintage Rust</span><span class="swatch-hex">#8B4513</span></div></div><div class="swatch-card"><span class="swatch" style="background:#4A525A"></span><div class="swatch-meta"><span class="swatch-name">Slate</span><span class="swatch-hex">#4A525A</span></div></div><div class="swatch-card"><span class="swatch" style="background:#2D2E30"></span><div class="swatch-meta"><span class="swatch-name">Charcoal</span><span class="swatch-hex">#2D2E30</span></div></div></div></div>
+    <div class="palette-group"><h3>The Earthy Monochrome</h3>
+<div class="swatch-row">
+<div class="swatch-card"><span class="swatch" style="background:#2B1E17"></span><div class="swatch-meta"><span class="swatch-name">Espresso</span><span class="swatch-hex">#2B1E17</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#533E2D"></span><div class="swatch-meta"><span class="swatch-name">Tobacco</span><span class="swatch-hex">#533E2D</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#7A5135"></span><div class="swatch-meta"><span class="swatch-name">Chestnut</span><span class="swatch-hex">#7A5135</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#B58348"></span><div class="swatch-meta"><span class="swatch-name">Ochre</span><span class="swatch-hex">#B58348</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#D2B48C"></span><div class="swatch-meta"><span class="swatch-name">Tan</span><span class="swatch-hex">#D2B48C</span></div></div>
+</div></div>
+<div class="palette-group"><h3>Rich Fall Accents</h3>
+<div class="swatch-row">
+<div class="swatch-card"><span class="swatch" style="background:#3B131E"></span><div class="swatch-meta"><span class="swatch-name">Midnight Merlot</span><span class="swatch-hex">#3B131E</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#3D3A21"></span><div class="swatch-meta"><span class="swatch-name">Harvest Olive</span><span class="swatch-hex">#3D3A21</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#131E29"></span><div class="swatch-meta"><span class="swatch-name">Hunter Navy</span><span class="swatch-hex">#131E29</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#6B2B20"></span><div class="swatch-meta"><span class="swatch-name">Auburn</span><span class="swatch-hex">#6B2B20</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#1D2C22"></span><div class="swatch-meta"><span class="swatch-name">Forest Green</span><span class="swatch-hex">#1D2C22</span></div></div>
+</div></div>
+<div class="palette-group"><h3>Metallic &amp; Luxe Highlight</h3>
+<div class="swatch-row">
+<div class="swatch-card"><span class="swatch" style="background:#B5944B"></span><div class="swatch-meta"><span class="swatch-name">Antique Gold</span><span class="swatch-hex">#B5944B</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#A8A9AD"></span><div class="swatch-meta"><span class="swatch-name">Shimmering Silver</span><span class="swatch-hex">#A8A9AD</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#7A5F3A"></span><div class="swatch-meta"><span class="swatch-name">Burnished Bronze</span><span class="swatch-hex">#7A5F3A</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#E5D2B3"></span><div class="swatch-meta"><span class="swatch-name">Champagne</span><span class="swatch-hex">#E5D2B3</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#686C6F"></span><div class="swatch-meta"><span class="swatch-name">Soft Pewter</span><span class="swatch-hex">#686C6F</span></div></div>
+</div></div>
+<div class="palette-group"><h3>Neutral Bases &amp; Vintage Undertones</h3>
+<div class="swatch-row">
+<div class="swatch-card"><span class="swatch" style="background:#F0E5D1"></span><div class="swatch-meta"><span class="swatch-name">Warm Cream</span><span class="swatch-hex">#F0E5D1</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#C2B280"></span><div class="swatch-meta"><span class="swatch-name">Desert Sand</span><span class="swatch-hex">#C2B280</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#8B4513"></span><div class="swatch-meta"><span class="swatch-name">Vintage Rust</span><span class="swatch-hex">#8B4513</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#4A525A"></span><div class="swatch-meta"><span class="swatch-name">Slate</span><span class="swatch-hex">#4A525A</span></div></div>
+<div class="swatch-card"><span class="swatch" style="background:#2D2E30"></span><div class="swatch-meta"><span class="swatch-name">Charcoal</span><span class="swatch-hex">#2D2E30</span></div></div>
+</div></div>
   </div>
 </section>
 <section id="lookbook">
   <h2>The Lookbook</h2>
   <p class="section-intro">
-    For each color: three age ranges, and two options each —
-    a <strong>designer pick from Ralph Lauren</strong> and a <strong>cheaper dupe</strong>
-    from Uniqlo, H&amp;M, Gap, Amazon or Target.
-    Links open the retailer's search pre-filled with the color and item,
-    so you land directly on matching pieces.
+    For each color below: outfit vibe, then items grouped by age range.
+    Every link is a real, verified product — a designer pick (Ralph Lauren, via Nordstrom,
+    Macy's or the Ralph Lauren site) and an affordable option (Uniqlo, H&amp;M, Gap, Old Navy,
+    J.Crew or Target). Click any thumbnail or the "Shop this piece" button to open the item.
   </p>
-  <h3 class="group-title">The Earthy Monochrome</h3><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#2B1E17"></span><div><h4>Espresso</h4><span class="hex">#2B1E17</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=espresso%20brown%20baby%20knit%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=brown%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on Uniqlo — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=espresso%20brown%20kids%20cardigan" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=brown%20cardigan%20kids" target="_blank" rel="noopener">Dupe on H&amp;M — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Wool Sweater</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=espresso%20wool%20sweater" target="_blank" rel="noopener">Ralph Lauren — Wool Sweater</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=dark%20brown%20sweater" target="_blank" rel="noopener">Dupe on Gap — Wool Sweater</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#533E2D"></span><div><h4>Tobacco</h4><span class="hex">#533E2D</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Romper</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=tobacco%20brown%20baby%20romper" target="_blank" rel="noopener">Ralph Lauren — Romper</a><a class="btn dupe" href="https://www.amazon.com/s?k=brown%20baby%20romper" target="_blank" rel="noopener">Dupe on Amazon — Romper</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Knit Dress</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=tobacco%20brown%20knit%20dress%20girls" target="_blank" rel="noopener">Ralph Lauren — Knit Dress</a><a class="btn dupe" href="https://www.target.com/s?searchTerm=brown%20knit%20dress%20kids" target="_blank" rel="noopener">Dupe on Target — Knit Dress</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Coat</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=tobacco%20brown%20coat" target="_blank" rel="noopener">Ralph Lauren — Coat</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=brown%20coat" target="_blank" rel="noopener">Dupe on Uniqlo — Coat</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#7A5135"></span><div><h4>Chestnut</h4><span class="hex">#7A5135</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Cotton Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=chestnut%20brown%20baby%20set" target="_blank" rel="noopener">Ralph Lauren — Cotton Set</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=brown%20baby%20set" target="_blank" rel="noopener">Dupe on H&amp;M — Cotton Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=chestnut%20brown%20cardigan%20boys" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=brown%20cardigan%20boys" target="_blank" rel="noopener">Dupe on Gap — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Trousers</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=chestnut%20brown%20trousers" target="_blank" rel="noopener">Ralph Lauren — Trousers</a><a class="btn dupe" href="https://www.amazon.com/s?k=brown%20wool%20trousers" target="_blank" rel="noopener">Dupe on Amazon — Trousers</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#B58348"></span><div><h4>Ochre</h4><span class="hex">#B58348</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Dress</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=ochre%20baby%20dress" target="_blank" rel="noopener">Ralph Lauren — Dress</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=yellow%20baby%20dress" target="_blank" rel="noopener">Dupe on Uniqlo — Dress</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=ochre%20yellow%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=yellow%20cardigan%20kids" target="_blank" rel="noopener">Dupe on H&amp;M — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Dress</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=ochre%20midi%20dress" target="_blank" rel="noopener">Ralph Lauren — Dress</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=ochre%20dress" target="_blank" rel="noopener">Dupe on Gap — Dress</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#D2B48C"></span><div><h4>Tan</h4><span class="hex">#D2B48C</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=tan%20baby%20knit%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://www.target.com/s?searchTerm=tan%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on Target — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=tan%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.amazon.com/s?k=tan%20kids%20cardigan" target="_blank" rel="noopener">Dupe on Amazon — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Wool Coat</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=tan%20wool%20coat" target="_blank" rel="noopener">Ralph Lauren — Wool Coat</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=tan%20coat" target="_blank" rel="noopener">Dupe on H&amp;M — Wool Coat</a></div></div></article><h3 class="group-title">Rich Fall Accents</h3><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#3B131E"></span><div><h4>Midnight Merlot</h4><span class="hex">#3B131E</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=midnight%20merlot%20baby%20knit%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=burgundy%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on Uniqlo — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=midnight%20merlot%20cardigan%20girls" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=burgundy%20cardigan%20kids" target="_blank" rel="noopener">Dupe on H&amp;M — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Sweater</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=midnight%20merlot%20sweater" target="_blank" rel="noopener">Ralph Lauren — Sweater</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=burgundy%20sweater" target="_blank" rel="noopener">Dupe on Gap — Sweater</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#3D3A21"></span><div><h4>Harvest Olive</h4><span class="hex">#3D3A21</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Cotton Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=harvest%20olive%20baby%20set" target="_blank" rel="noopener">Ralph Lauren — Cotton Set</a><a class="btn dupe" href="https://www.amazon.com/s?k=olive%20baby%20set" target="_blank" rel="noopener">Dupe on Amazon — Cotton Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=harvest%20olive%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.target.com/s?searchTerm=olive%20cardigan%20kids" target="_blank" rel="noopener">Dupe on Target — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Coat</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=harvest%20olive%20coat" target="_blank" rel="noopener">Ralph Lauren — Coat</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=olive%20coat" target="_blank" rel="noopener">Dupe on Uniqlo — Coat</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#131E29"></span><div><h4>Hunter Navy</h4><span class="hex">#131E29</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=hunter%20navy%20baby%20knit%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=navy%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on H&amp;M — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=hunter%20navy%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=navy%20cardigan%20kids" target="_blank" rel="noopener">Dupe on Gap — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Sweater</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=hunter%20navy%20sweater" target="_blank" rel="noopener">Ralph Lauren — Sweater</a><a class="btn dupe" href="https://www.amazon.com/s?k=navy%20wool%20sweater" target="_blank" rel="noopener">Dupe on Amazon — Sweater</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#6B2B20"></span><div><h4>Auburn</h4><span class="hex">#6B2B20</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Dress</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=auburn%20red%20baby%20dress" target="_blank" rel="noopener">Ralph Lauren — Dress</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=red%20baby%20dress" target="_blank" rel="noopener">Dupe on Uniqlo — Dress</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=auburn%20red%20cardigan%20girls" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=red%20cardigan%20girls" target="_blank" rel="noopener">Dupe on H&amp;M — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Coat</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=auburn%20coat" target="_blank" rel="noopener">Ralph Lauren — Coat</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=rust%20red%20coat" target="_blank" rel="noopener">Dupe on Gap — Coat</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#1D2C22"></span><div><h4>Forest Green</h4><span class="hex">#1D2C22</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=forest%20green%20baby%20knit%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://www.target.com/s?searchTerm=green%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on Target — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Sweater</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=forest%20green%20sweater%20kids" target="_blank" rel="noopener">Ralph Lauren — Sweater</a><a class="btn dupe" href="https://www.amazon.com/s?k=green%20kids%20sweater" target="_blank" rel="noopener">Dupe on Amazon — Sweater</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Coat</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=forest%20green%20coat" target="_blank" rel="noopener">Ralph Lauren — Coat</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=green%20coat" target="_blank" rel="noopener">Dupe on Uniqlo — Coat</a></div></div></article><h3 class="group-title">Metallic &amp; Luxe Highlights</h3><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#B5944B"></span><div><h4>Antique Gold</h4><span class="hex">#B5944B</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Festive Outfit</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=antique%20gold%20baby%20outfit" target="_blank" rel="noopener">Ralph Lauren — Festive Outfit</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=gold%20baby%20outfit" target="_blank" rel="noopener">Dupe on H&amp;M — Festive Outfit</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=antique%20gold%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=gold%20kids%20sweater" target="_blank" rel="noopener">Dupe on Gap — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Dress</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=antique%20gold%20dress" target="_blank" rel="noopener">Ralph Lauren — Dress</a><a class="btn dupe" href="https://www.amazon.com/s?k=gold%20dress" target="_blank" rel="noopener">Dupe on Amazon — Dress</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#A8A9AD"></span><div><h4>Shimmering Silver</h4><span class="hex">#A8A9AD</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=shimmering%20silver%20baby%20knit%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=gray%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on Uniqlo — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=shimmering%20silver%20sweater%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.target.com/s?searchTerm=silver%20cardigan%20kids" target="_blank" rel="noopener">Dupe on Target — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Dress</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=silver%20knit%20dress" target="_blank" rel="noopener">Ralph Lauren — Dress</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=silver%20dress" target="_blank" rel="noopener">Dupe on H&amp;M — Dress</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#7A5F3A"></span><div><h4>Burnished Bronze</h4><span class="hex">#7A5F3A</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=burnished%20bronze%20baby%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://www.amazon.com/s?k=brown%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on Amazon — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=burnished%20bronze%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=brown%20cardigan%20kids" target="_blank" rel="noopener">Dupe on Uniqlo — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Sweater</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=bronze%20sweater" target="_blank" rel="noopener">Ralph Lauren — Sweater</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=bronze%20brown%20sweater" target="_blank" rel="noopener">Dupe on Gap — Sweater</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#E5D2B3"></span><div><h4>Champagne</h4><span class="hex">#E5D2B3</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Dress</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=champagne%20baby%20dress" target="_blank" rel="noopener">Ralph Lauren — Dress</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=cream%20baby%20dress" target="_blank" rel="noopener">Dupe on H&amp;M — Dress</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=champagne%20knit%20set%20kids" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=cream%20kids%20sweater" target="_blank" rel="noopener">Dupe on Gap — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Dress</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=champagne%20dress" target="_blank" rel="noopener">Ralph Lauren — Dress</a><a class="btn dupe" href="https://www.amazon.com/s?k=champagne%20dress" target="_blank" rel="noopener">Dupe on Amazon — Dress</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#686C6F"></span><div><h4>Soft Pewter</h4><span class="hex">#686C6F</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=soft%20pewter%20gray%20baby%20knit%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=gray%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on Uniqlo — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=soft%20gray%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.target.com/s?searchTerm=gray%20cardigan%20kids" target="_blank" rel="noopener">Dupe on Target — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Sweater</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=soft%20pewter%20sweater" target="_blank" rel="noopener">Ralph Lauren — Sweater</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=gray%20sweater" target="_blank" rel="noopener">Dupe on H&amp;M — Sweater</a></div></div></article><h3 class="group-title">Neutral Bases &amp; Vintage Undertones</h3><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#F0E5D1"></span><div><h4>Warm Cream</h4><span class="hex">#F0E5D1</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=warm%20cream%20baby%20knit%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://www.amazon.com/s?k=cream%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on Amazon — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=warm%20cream%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=cream%20cardigan%20kids" target="_blank" rel="noopener">Dupe on Uniqlo — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Sweater</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=warm%20ivory%20sweater" target="_blank" rel="noopener">Ralph Lauren — Sweater</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=cream%20sweater" target="_blank" rel="noopener">Dupe on Gap — Sweater</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#C2B280"></span><div><h4>Desert Sand</h4><span class="hex">#C2B280</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=desert%20sand%20baby%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=beige%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on H&amp;M — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=desert%20sand%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=beige%20cardigan%20kids" target="_blank" rel="noopener">Dupe on Gap — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Coat</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=desert%20sand%20coat" target="_blank" rel="noopener">Ralph Lauren — Coat</a><a class="btn dupe" href="https://www.amazon.com/s?k=beige%20coat" target="_blank" rel="noopener">Dupe on Amazon — Coat</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#8B4513"></span><div><h4>Vintage Rust</h4><span class="hex">#8B4513</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=vintage%20rust%20baby%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://www.target.com/s?searchTerm=rust%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on Target — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=vintage%20rust%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=rust%20cardigan%20kids" target="_blank" rel="noopener">Dupe on Uniqlo — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Coat</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=vintage%20rust%20coat" target="_blank" rel="noopener">Ralph Lauren — Coat</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=rust%20coat" target="_blank" rel="noopener">Dupe on H&amp;M — Coat</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#4A525A"></span><div><h4>Slate</h4><span class="hex">#4A525A</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=slate%20gray%20baby%20knit%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://www.amazon.com/s?k=gray%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on Amazon — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=slate%20gray%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=gray%20cardigan%20kids" target="_blank" rel="noopener">Dupe on Gap — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Trousers</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=slate%20gray%20trousers" target="_blank" rel="noopener">Ralph Lauren — Trousers</a><a class="btn dupe" href="https://uniqlo.com/us/en/search?q=gray%20trousers" target="_blank" rel="noopener">Dupe on Uniqlo — Trousers</a></div></div></article><article class="color-card"><header class="color-head"><span class="big-swatch" style="background:#2D2E30"></span><div><h4>Charcoal</h4><span class="hex">#2D2E30</span></div></header><div class="age-row"><div class="age-info"><span class="age-label">Baby & Toddler</span><span class="item-type">Knit Set</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=charcoal%20gray%20baby%20knit%20set" target="_blank" rel="noopener">Ralph Lauren — Knit Set</a><a class="btn dupe" href="https://www.hm.com/us-en/search?searchTerm=gray%20baby%20knit%20set" target="_blank" rel="noopener">Dupe on H&amp;M — Knit Set</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Kids & Teens</span><span class="item-type">Cardigan</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=charcoal%20cardigan%20kids" target="_blank" rel="noopener">Ralph Lauren — Cardigan</a><a class="btn dupe" href="https://www.gap.com/browse/search.do?searchText=charcoal%20cardigan%20kids" target="_blank" rel="noopener">Dupe on Gap — Cardigan</a></div></div><div class="age-row"><div class="age-info"><span class="age-label">Adults</span><span class="item-type">Sweater</span></div><div class="age-links"><a class="btn premium" href="https://www.ralphlauren.com/search?searchTerm=charcoal%20sweater" target="_blank" rel="noopener">Ralph Lauren — Sweater</a><a class="btn dupe" href="https://www.amazon.com/s?k=charcoal%20sweater" target="_blank" rel="noopener">Dupe on Amazon — Sweater</a></div></div></article>
+  <h3 class="group-title">The Earthy Monochrome</h3>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#2B1E17"></span><div><h4>Espresso</h4><span class="hex">#2B1E17</span></div></header>
+<p class="vibe">Monochrome dark brown leather, wool-cashmere turtleneck dresses, and dark brown tailored suiting.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#2B1E17" href="https://www.ralphlauren.com/women-clothing-jackets/jaxson-printed-lambskin-moto-jacket/100101323.html?dwvar100101323_colorname=Espresso" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Ralph Lauren Collection Jaxson Printed Lambskin Moto Jacket (Espresso)</span>
+<a class="btn buy" href="https://www.ralphlauren.com/women-clothing-jackets/jaxson-printed-lambskin-moto-jacket/100101323.html?dwvar100101323_colorname=Espresso" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#2B1E17" href="https://www.ralphlauren.com/women-clothing-dresses/wool-cashmere-turtleneck-dress/100082241.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Ralph Lauren Women's Wool-Cashmere Turtleneck Dress (Circuit Brown)</span>
+<a class="btn buy" href="https://www.ralphlauren.com/women-clothing-dresses/wool-cashmere-turtleneck-dress/100082241.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#2B1E17" href="https://www2.hm.com/en_us/productpage.1357821003.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Dark Brown Pinstriped Double-Breasted Blazer</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.1357821003.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Kids</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb" href="https://www.uniqlo.com/us/en/products/E481378-000/00?colorDisplayCode=69&amp;sizeDisplayCode=110" target="_blank" rel="noopener"><img src="images/products/uq_E481378_69.jpg" alt="Uniqlo Kids DRY Sweat Stadium Jacket (Dark Brown)" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Uniqlo Kids DRY Sweat Stadium Jacket (Dark Brown)</span>
+<a class="btn buy" href="https://www.uniqlo.com/us/en/products/E481378-000/00?colorDisplayCode=69&amp;sizeDisplayCode=110" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#533E2D"></span><div><h4>Tobacco</h4><span class="hex">#533E2D</span></div></header>
+<p class="vibe">Rugged waxed cotton utility coats, double-knit hoodies, and heavy fall layers.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Men / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#533E2D" href="https://www.ralphlauren.com/men-clothing-jackets-coats-vests/waxed-cotton-walking-coat/539377.html?dwvar539377_colorname=Medium%20Brown" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">RRL by Ralph Lauren Waxed Cotton Walking Coat (Medium Brown)</span>
+<a class="btn buy" href="https://www.ralphlauren.com/men-clothing-jackets-coats-vests/waxed-cotton-walking-coat/539377.html?dwvar539377_colorname=Medium%20Brown" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#533E2D" href="https://www.nordstrom.com/s/big-tall-logo-double-knit-hoodie/8284828?color=BROWN%20HEATHER" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Polo Ralph Lauren Big &amp; Tall Logo Double-Knit Hoodie (Brown Heather)</span>
+<a class="btn buy" href="https://www.nordstrom.com/s/big-tall-logo-double-knit-hoodie/8284828?color=BROWN%20HEATHER" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Men / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#533E2D" href="https://oldnavy.gap.com/browse/product.do?pid=9034620420404" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Old Navy Essential Crew-Neck Sweater (Brown Heather)</span>
+<a class="btn buy" href="https://oldnavy.gap.com/browse/product.do?pid=9034620420404" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#533E2D" href="https://www.target.com/p/jessica-london-2-piece-sweater-jacket-dress-26-28-brown-maple/-/A-1013370474" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Jessica London 2-Piece Sweater Jacket Dress (Brown Maple)</span>
+<a class="btn buy" href="https://www.target.com/p/jessica-london-2-piece-sweater-jacket-dress-26-28-brown-maple/-/A-1013370474" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#7A5135"></span><div><h4>Chestnut</h4><span class="hex">#7A5135</span></div></header>
+<p class="vibe">Rich mid-brown suede sport coats, modal-silk turtlenecks, and satchel accessories.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Men / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#7A5135" href="https://www.nordstrom.com/s/stewart-suede-sport-coat/7885099" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Ralph Lauren Purple Label Stewart Suede Sport Coat (Brown)</span>
+<a class="btn buy" href="https://www.nordstrom.com/s/stewart-suede-sport-coat/7885099" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#7A5135" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-modal-silk-blend-slim-fit-turtleneck-sweater?ID=26479617&amp;swatchColor=Circuit%20Brown" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Women's Modal-Silk Blend Slim-Fit Turtleneck (Circuit Brown)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-modal-silk-blend-slim-fit-turtleneck-sweater?ID=26479617&amp;swatchColor=Circuit%20Brown" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#7A5135" href="https://www.macys.com/shop/product/lauren-ralph-lauren-suede-marcy-large-satchel-handbag?ID=27257124" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Accessory</span>
+<span class="item-name">Lauren Ralph Lauren Marcy Suede Large Satchel Bag</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-suede-marcy-large-satchel-handbag?ID=27257124" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#7A5135" href="https://www.target.com/p/women-39-s-pointelle-tank-top-a-new-day-8482-brown-xs/-/A-95025720" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">A New Day Women's Pointelle Knit Top (Brown)</span>
+<a class="btn buy" href="https://www.target.com/p/women-39-s-pointelle-tank-top-a-new-day-8482-brown-xs/-/A-95025720" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Men / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#7A5135" href="https://www.target.com/p/dockers-mens-greer-dress-run-off-loafer-shoe-brown-size-7-5/-/A-82534133" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Dockers Men's Greer Dress Casual Run-Off Loafer (Brown)</span>
+<a class="btn buy" href="https://www.target.com/p/dockers-mens-greer-dress-run-off-loafer-shoe-brown-size-7-5/-/A-82534133" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#B58348"></span><div><h4>Ochre</h4><span class="hex">#B58348</span></div></header>
+<p class="vibe">Warm golden-brown and camel cable-knit dresses, turtlenecks, and cotton sweaters for kids and teens.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Girls</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#B58348" href="https://www.nordstrom.com/s/polo-ralph-lauren-20-2-cotton-classiccable-dress/9314138" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Polo Ralph Lauren Kids' Cable-Knit Cotton Polo Sweater Dress</span>
+<a class="btn buy" href="https://www.nordstrom.com/s/polo-ralph-lauren-20-2-cotton-classiccable-dress/9314138" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#B58348" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-modal-silk-blend-slim-fit-turtleneck-sweater?ID=26479617&amp;swatchColor=Lauren%20Camel" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Modal-Silk Blend Slim-Fit Turtleneck (Lauren Camel)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-modal-silk-blend-slim-fit-turtleneck-sweater?ID=26479617&amp;swatchColor=Lauren%20Camel" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Boys &amp; Girls</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb" href="https://www.gap.com/browse/product.do?pid=819221022" target="_blank" rel="noopener"><img src="images/products/gap_819221022.jpg" alt="Gap Kids Relaxed Cotton Crewneck Sweater" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Gap Kids Relaxed Cotton Crewneck Sweater</span>
+<a class="btn buy" href="https://www.gap.com/browse/product.do?pid=819221022" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#B58348" href="https://www.target.com/p/women-39-s-long-sleeve-sweater-dress-a-new-day-8482-light-heather-brown-xxl/-/A-94662101" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">A New Day Women's Long Sleeve Mini Sweater Dress (Light Heather Brown)</span>
+<a class="btn buy" href="https://www.target.com/p/women-39-s-long-sleeve-sweater-dress-a-new-day-8482-light-heather-brown-xxl/-/A-94662101" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#D2B48C"></span><div><h4>Tan</h4><span class="hex">#D2B48C</span></div></header>
+<p class="vibe">Tailored beige/camel tweed coats, fitted blazers, and equestrian neutral knits.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#D2B48C" href="https://www.nordstrom.com/s/lauren-ralph-lauren-wool-blend-tweed-coat/8275098" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Wool Blend Tweed Coat (Brown Broken Twill)</span>
+<a class="btn buy" href="https://www.nordstrom.com/s/lauren-ralph-lauren-wool-blend-tweed-coat/8275098" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#D2B48C" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-button-trim-cable-knit-sweater?ID=26479705&amp;swatchColor=Lauren%20Camel" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Button-Trim Cable-Knit Sweater (Lauren Camel)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-button-trim-cable-knit-sweater?ID=26479705&amp;swatchColor=Lauren%20Camel" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#D2B48C" href="https://www2.hm.com/en_us/productpage.0987022012.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Women's Beige Fitted Blazer</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.0987022012.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#D2B48C" href="https://oldnavy.gap.com/browse/product.do?pid=886686002" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Old Navy SoSoft Lite Pointelle Sweater Dress</span>
+<a class="btn buy" href="https://oldnavy.gap.com/browse/product.do?pid=886686002" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+
+<h3 class="group-title">Rich Fall Accents</h3>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#3B131E"></span><div><h4>Midnight Merlot</h4><span class="hex">#3B131E</span></div></header>
+<p class="vibe">Deep wine and garnet velvet evening sheaths, cable-knit turtlenecks, and corduroy dresses.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#3B131E" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-long-sleeve-velvet-sheath-dress?ID=26479630&amp;swatchColor=Lauren%20Red%20Velvet" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Long-Sleeve Velvet Sheath Dress</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-long-sleeve-velvet-sheath-dress?ID=26479630&amp;swatchColor=Lauren%20Red%20Velvet" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#3B131E" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-button-trim-cable-knit-sweater?ID=26479705&amp;swatchColor=Dark%20Garnet" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Button-Trim Cable-Knit Sweater (Dark Garnet)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-button-trim-cable-knit-sweater?ID=26479705&amp;swatchColor=Dark%20Garnet" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#3B131E" href="https://www.target.com/p/inspire-chic-women-s-2026-corduroy-three-Quarter-sleeve-crew-neck-knee-length-fall-casual-a-line-pocket-dresses-large-burgundy/-/A-1015424934" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Inspire Chic Women's Corduroy A-Line Midi Dress (Burgundy)</span>
+<a class="btn buy" href="https://www.target.com/p/inspire-chic-women-s-2026-corduroy-three-Quarter-sleeve-crew-neck-knee-length-fall-casual-a-line-pocket-dresses-large-burgundy/-/A-1015424934" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#3B131E" href="https://oldnavy.gap.com/browse/product.do?pid=132890172" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Old Navy V-Neck Shift Dress</span>
+<a class="btn buy" href="https://oldnavy.gap.com/browse/product.do?pid=132890172" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#3D3A21"></span><div><h4>Harvest Olive</h4><span class="hex">#3D3A21</span></div></header>
+<p class="vibe">Utilitarian olive cotton shirting, lambswool mock-neck sweaters, and earthy layering pieces.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#3D3A21" href="https://www.nordstrom.com/s/lauren-ralph-lauren-stripe-cotton-button-up-shirt/7968803" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Stripe Cotton Button-Up Shirt (Olive/White)</span>
+<a class="btn buy" href="https://www.nordstrom.com/s/lauren-ralph-lauren-stripe-cotton-button-up-shirt/7968803" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb" href="https://www.uniqlo.com/us/en/products/E479208-000/00?colorDisplayCode=56&amp;sizeDisplayCode=005" target="_blank" rel="noopener"><img src="images/products/uq_E479208_56.jpg" alt="Uniqlo Women's Zip-Up Short Jacket (56 Olive)" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Uniqlo Women's Zip-Up Short Jacket (56 Olive)</span>
+<a class="btn buy" href="https://www.uniqlo.com/us/en/products/E479208-000/00?colorDisplayCode=56&amp;sizeDisplayCode=005" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Men / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#3D3A21" href="https://www.nordstrom.com/s/7248496?color=SERVICE+GREEN+HEATHER" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Polo Ralph Lauren Brush Back Fleece Bomber Jacket (Service Green Heather)</span>
+<a class="btn buy" href="https://www.nordstrom.com/s/7248496?color=SERVICE+GREEN+HEATHER" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb" href="https://www.uniqlo.com/us/en/products/E480026-000/00?colorDisplayCode=57&amp;sizeDisplayCode=001" target="_blank" rel="noopener"><img src="images/products/uq_E480026_57.jpg" alt="Uniqlo Women's Lambswool Mock Neck Sweater (57 Olive)" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Uniqlo Women's Lambswool Mock Neck Sweater (57 Olive)</span>
+<a class="btn buy" href="https://www.uniqlo.com/us/en/products/E480026-000/00?colorDisplayCode=57&amp;sizeDisplayCode=001" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Boys</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb" href="https://www.gap.com/browse/product.do?pid=1184259012" target="_blank" rel="noopener"><img src="images/products/gap_1184259012.jpg" alt="Gap Kids Knit Jersey Plaid Shirt" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Gap Kids Knit Jersey Plaid Shirt</span>
+<a class="btn buy" href="https://www.gap.com/browse/product.do?pid=1184259012" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#131E29"></span><div><h4>Hunter Navy</h4><span class="hex">#131E29</span></div></header>
+<p class="vibe">Heritage collegiate cable-knit dresses for women and girls, pima cotton crewnecks, and corduroy bombers.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Men / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#131E29" href="https://www.macys.com/shop/product/polo-ralph-lauren-mens-pima-regular-fit-crewneck-sweater?ID=23011624&amp;swatchColor=Hunter%20Navy" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Polo Ralph Lauren Men's Pima Regular-Fit Crewneck Sweater (Hunter Navy)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/polo-ralph-lauren-mens-pima-regular-fit-crewneck-sweater?ID=23011624&amp;swatchColor=Hunter%20Navy" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#131E29" href="https://www.ralphlauren.com/women-clothing-dresses/cable-knit-cotton-blend-sweater-dress/100102192.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Ralph Lauren Women's Cable-Knit Cotton-Blend Sweater Dress (Lauren Navy)</span>
+<a class="btn buy" href="https://www.ralphlauren.com/women-clothing-dresses/cable-knit-cotton-blend-sweater-dress/100102192.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Girls</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#131E29" href="https://www.ralphlauren.com/girls-clothing-dresses/cable-knit-cotton-sweater-dress/100103233.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Ralph Lauren Girls' Cable-Knit Cotton Sweater Dress (Refined Navy)</span>
+<a class="btn buy" href="https://www.ralphlauren.com/girls-clothing-dresses/cable-knit-cotton-sweater-dress/100103233.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#131E29" href="https://www.target.com/p/arshiner-girls-sweater-dress-long-sleeve-button-knit-fall-winter-dresses-navy-blue-white-10-11-years/-/A-1014926023" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Arshiner Girls' Long Sleeve Button-Knit Sweater Dress (Navy)</span>
+<a class="btn buy" href="https://www.target.com/p/arshiner-girls-sweater-dress-long-sleeve-button-knit-fall-winter-dresses-navy-blue-white-10-11-years/-/A-1014926023" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#131E29" href="https://www.target.com/p/hope-henry-girls-organic-puff-sleeve-tiered-party-dress-kids-navy-5/-/A-1014406038" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Hope &amp; Henry Girls' Organic Puff Sleeve Tiered Party Dress (Navy)</span>
+<a class="btn buy" href="https://www.target.com/p/hope-henry-girls-organic-puff-sleeve-tiered-party-dress-kids-navy-5/-/A-1014406038" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Men / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#131E29" href="https://www.target.com/p/men-39-s-corduroy-bomber-jacket-goodfellow-38-co-8482-navy-blue-m/-/A-95196204" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Goodfellow &amp; Co. Men's Corduroy Bomber Jacket (Navy Blue)</span>
+<a class="btn buy" href="https://www.target.com/p/men-39-s-corduroy-bomber-jacket-goodfellow-38-co-8482-navy-blue-m/-/A-95196204" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#6B2B20"></span><div><h4>Auburn</h4><span class="hex">#6B2B20</span></div></header>
+<p class="vibe">Deep russet-red cable-knit turtlenecks, bold red sweaters, and smocked-waist autumn midi dresses.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#6B2B20" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-cable-knit-cotton-turtleneck-sweater?ID=26479621&amp;swatchColor=Dark%20Garnet" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Cable-Knit Cotton Turtleneck Sweater (Dark Garnet)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-cable-knit-cotton-turtleneck-sweater?ID=26479621&amp;swatchColor=Dark%20Garnet" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#6B2B20" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-button-trim-cable-knit-sweater?ID=26479705&amp;swatchColor=Ralph%20Red" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Button-Trim Cable-Knit Sweater (Ralph Red)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-button-trim-cable-knit-sweater?ID=26479705&amp;swatchColor=Ralph%20Red" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#6B2B20" href="https://oldnavy.gap.com/browse/product.do?pid=898215052&amp;vid=1&amp;pcid=3039764&amp;cid=3039764" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Old Navy Fit &amp; Flare Jersey Smocked-Waist Midi Dress</span>
+<a class="btn buy" href="https://oldnavy.gap.com/browse/product.do?pid=898215052&amp;vid=1&amp;pcid=3039764&amp;cid=3039764" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb" href="https://www.jcrew.com/p/womens/categories/clothing/sweaters/pullovers/CR357?display=sale&amp;fit=Classic&amp;colorProductCode=CR357&amp;isFromSale=true&amp;colorCode=RD5133" target="_blank" rel="noopener"><img src="images/products/jc_CR357.jpg" alt="J.Crew Cotton-Blend V-Neck Pullover Sweater" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">J.Crew Cotton-Blend V-Neck Pullover Sweater</span>
+<a class="btn buy" href="https://www.jcrew.com/p/womens/categories/clothing/sweaters/pullovers/CR357?display=sale&amp;fit=Classic&amp;colorProductCode=CR357&amp;isFromSale=true&amp;colorCode=RD5133" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#1D2C22"></span><div><h4>Forest Green</h4><span class="hex">#1D2C22</span></div></header>
+<p class="vibe">Black Watch tartan wool coats, deep moss-agate knits, and collegiate boys' polo sweaters.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#1D2C22" href="https://www.nordstrom.com/s/lauren-ralph-lauren-wool-blend-tweed-coat/8275098" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Wool Blend Tweed Coat (Black Watch)</span>
+<a class="btn buy" href="https://www.nordstrom.com/s/lauren-ralph-lauren-wool-blend-tweed-coat/8275098" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#1D2C22" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-button-trim-cable-knit-sweater?ID=26479705&amp;swatchColor=Moss%20Agate" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Button-Trim Cable-Knit Sweater (Moss Agate)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-button-trim-cable-knit-sweater?ID=26479705&amp;swatchColor=Moss%20Agate" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Boys</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#1D2C22" href="https://www.macys.com/shop/product/polo-ralph-lauren-boys-8-20-cable-knit-cotton-polo-sweater?ID=25338593" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Polo Ralph Lauren Boys' 8-20 Cable-Knit Cotton Polo Sweater</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/polo-ralph-lauren-boys-8-20-cable-knit-cotton-polo-sweater?ID=25338593" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Men / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#1D2C22" href="https://www.nordstrom.com/s/polo-ralph-lauren-cable-knit-cotton-crewneck-sweater/8329033" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Polo Ralph Lauren Cable Knit Cotton Crewneck Sweater (Green)</span>
+<a class="btn buy" href="https://www.nordstrom.com/s/polo-ralph-lauren-cable-knit-cotton-crewneck-sweater/8329033" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Kids</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb" href="https://www.uniqlo.com/us/en/products/E481378-000/00?colorDisplayCode=69&amp;sizeDisplayCode=110" target="_blank" rel="noopener"><img src="images/products/uq_E481378_69.jpg" alt="Uniqlo Kids DRY Sweat Stadium Jacket (Dark Green)" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Uniqlo Kids DRY Sweat Stadium Jacket (Dark Green)</span>
+<a class="btn buy" href="https://www.uniqlo.com/us/en/products/E481378-000/00?colorDisplayCode=69&amp;sizeDisplayCode=110" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+
+<h3 class="group-title">Metallic &amp; Luxe Highlight</h3>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#B5944B"></span><div><h4>Antique Gold</h4><span class="hex">#B5944B</span></div></header>
+<p class="vibe">Cable-and-rib metallic gold knit dresses and pleated metallic jersey evening gowns.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#B5944B" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-buckle-trim-metallic-gown?ID=23812653" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Women's Buckle-Trim Metallic Gown</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-buckle-trim-metallic-gown?ID=23812653" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#B5944B" href="https://www.ralphlauren.com/women-clothing-dresses/cable-and-rib-knit-short-sleeve-dress/100092629.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Ralph Lauren Women's Cable &amp; Rib-Knit Short-Sleeve Dress (Lauren Gold Metallic)</span>
+<a class="btn buy" href="https://www.ralphlauren.com/women-clothing-dresses/cable-and-rib-knit-short-sleeve-dress/100092629.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#B5944B" href="https://oldnavy.gap.com/browse/product.do?pid=886686012" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Old Navy SoSoft Lite Pointelle Sweater Dress</span>
+<a class="btn buy" href="https://oldnavy.gap.com/browse/product.do?pid=886686012" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#A8A9AD"></span><div><h4>Shimmering Silver</h4><span class="hex">#A8A9AD</span></div></header>
+<p class="vibe">Liquid-metallic evening skirts, silver accessories, and girls' metallic cable-knit dresses.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Girls</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#A8A9AD" href="https://www.macys.com/shop/product/polo-ralph-lauren-girls-7-16-cable-knit-long-sleeves-sweater?ID=23561841" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Polo Ralph Lauren Girls' 7-16 Cable-Knit Long-Sleeve Sweater</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/polo-ralph-lauren-girls-7-16-cable-knit-long-sleeves-sweater?ID=23561841" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#A8A9AD" href="https://www2.hm.com/en_us/productpage.1372881001.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Women's Silver-Colored Sequined Bow-Detail Skirt</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.1372881001.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#A8A9AD" href="https://www2.hm.com/en_us/productpage.0607557002.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Women's Silver-Colored Double-Strand Pendant Necklace</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.0607557002.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#7A5F3A"></span><div><h4>Burnished Bronze</h4><span class="hex">#7A5F3A</span></div></header>
+<p class="vibe">Warm metallic-bronze shimmer accents and rich gold-brown evening textures.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Girls</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#7A5F3A" href="https://www.macys.com/shop/product/polo-ralph-lauren-big-girls-cable-knit-cotton-polo-sweater-dress?ID=20057750" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Polo Ralph Lauren Big Girls' Cable-Knit Cotton Polo Sweater Dress</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/polo-ralph-lauren-big-girls-cable-knit-cotton-polo-sweater-dress?ID=20057750" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#7A5F3A" href="https://www2.hm.com/en_us/productpage.1268415001.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Kids' Bronze-Colored Shimmery Metallic Hairband</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.1268415001.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#7A5F3A" href="https://www2.hm.com/en_us/productpage.1319093001.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Women's Textured-Knit Maxi Dress</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.1319093001.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#E5D2B3"></span><div><h4>Champagne</h4><span class="hex">#E5D2B3</span></div></header>
+<p class="vibe">Luminous champagne-gold turtleneck sweater evening dresses and light beige lace-trimmed shirts.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#E5D2B3" href="https://www.ralphlauren.com/women-clothing-dresses/turtleneck-sweater-evening-dress/100039902.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Ralph Lauren Collection Champagne Gold Turtleneck Sweater Evening Dress</span>
+<a class="btn buy" href="https://www.ralphlauren.com/women-clothing-dresses/turtleneck-sweater-evening-dress/100039902.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#E5D2B3" href="https://www2.hm.com/en_us/productpage.1351493001.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Women's Light Beige Oversized Lace-Trimmed Shirt</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.1351493001.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#686C6F"></span><div><h4>Soft Pewter</h4><span class="hex">#686C6F</span></div></header>
+<p class="vibe">Cool-toned metallic silver-pewter jewelry, heather grey wool coats, and structured layers.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#686C6F" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-single-breasted-walker-coat?ID=18292098&amp;swatchColor=Light%20Heather%20Grey" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Single-Breasted Walker Coat (Light Heather Grey)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-single-breasted-walker-coat?ID=18292098&amp;swatchColor=Light%20Heather%20Grey" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#686C6F" href="https://www2.hm.com/en_us/productpage.0607557002.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Women's Silver-Colored Double-Strand Pendant Necklace</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.0607557002.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb" href="https://www.uniqlo.com/us/en/products/E480026-000/00?colorDisplayCode=02&amp;sizeDisplayCode=001" target="_blank" rel="noopener"><img src="images/products/uq_E480026_02.jpg" alt="Uniqlo Women's Lambswool Mock Neck Sweater (Light Gray)" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Uniqlo Women's Lambswool Mock Neck Sweater (Light Gray)</span>
+<a class="btn buy" href="https://www.uniqlo.com/us/en/products/E480026-000/00?colorDisplayCode=02&amp;sizeDisplayCode=001" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+
+<h3 class="group-title">Neutral Bases &amp; Vintage Undertones</h3>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#F0E5D1"></span><div><h4>Warm Cream</h4><span class="hex">#F0E5D1</span></div></header>
+<p class="vibe">Cable-knit collared sweaters in mascarpone cream, fine-knit mock turtlenecks, and toddler corduroy dresses.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#F0E5D1" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-cable-knit-collared-sweater?ID=28791777&amp;swatchColor=Mascarpone%20Cream" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Women's Cable-Knit Collared Sweater (Mascarpone Cream)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-cable-knit-collared-sweater?ID=28791777&amp;swatchColor=Mascarpone%20Cream" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#F0E5D1" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-button-trim-cable-knit-sweater?ID=26479705&amp;swatchColor=Mascarpone%20Cream" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Button-Trim Cable-Knit Sweater (Mascarpone Cream)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-button-trim-cable-knit-sweater?ID=26479705&amp;swatchColor=Mascarpone%20Cream" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Toddler Girls</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#F0E5D1" href="https://www.target.com/p/toddler-girls-39-long-sleeve-corduroy-dress-cat-38-jack-8482-cream-5t/-/A-1010915338" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Cat &amp; Jack Toddler Girls' Long-Sleeve Corduroy Dress (Cream)</span>
+<a class="btn buy" href="https://www.target.com/p/toddler-girls-39-long-sleeve-corduroy-dress-cat-38-jack-8482-cream-5t/-/A-1010915338" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#F0E5D1" href="https://www2.hm.com/en_us/productpage.1257636004.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Women's Cream/Striped Fine-Knit Mock Turtleneck Sweater</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.1257636004.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#C2B280"></span><div><h4>Desert Sand</h4><span class="hex">#C2B280</span></div></header>
+<p class="vibe">Lightweight chambray, neutral sand knits, and rose-gold/sand kids' footwear.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Girls</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#C2B280" href="https://www.nordstrom.com/s/ralph-lauren-kids-cotton-chambray-puff-sleeve-dress-big-kid/8247512" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Ralph Lauren Kids' Cotton Chambray Puff-Sleeve Dress</span>
+<a class="btn buy" href="https://www.nordstrom.com/s/ralph-lauren-kids-cotton-chambray-puff-sleeve-dress-big-kid/8247512" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Kids</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#C2B280" href="https://www2.hm.com/en_us/productpage.0591790001.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Kids' Rose Gold / Sand-Toned Sneakers</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.0591790001.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#8B4513"></span><div><h4>Vintage Rust</h4><span class="hex">#8B4513</span></div></header>
+<p class="vibe">Terracotta-rust textured knit maxi dresses, drop-waist midi dresses, and warm autumn knitwear.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#8B4513" href="https://www.macys.com/shop/product/lauren-ralph-lauren-petite-button-trim-cable-knit-sweater?ID=27634178" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Button-Trim Cable-Knit Sweater</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-petite-button-trim-cable-knit-sweater?ID=27634178" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#8B4513" href="https://www2.hm.com/en_us/productpage.1319093001.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">H&amp;M Women's Rust/Brown Textured-Knit Maxi Dress</span>
+<a class="btn buy" href="https://www2.hm.com/en_us/productpage.1319093001.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#8B4513" href="https://www.target.com/p/women-s-drop-waist-midi-dress-a-new-day-rust/-/A-1011278678" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">A New Day Women's Drop-Waist Midi Dress (Rust)</span>
+<a class="btn buy" href="https://www.target.com/p/women-s-drop-waist-midi-dress-a-new-day-rust/-/A-1011278678" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#4A525A"></span><div><h4>Slate</h4><span class="hex">#4A525A</span></div></header>
+<p class="vibe">Cool slate-blue and marled navy-charcoal rollneck sweaters, rib-knit tops, and full-zip knits.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Men / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#4A525A" href="https://www.ralphlauren.com/men-clothing-sweaters/cotton-full-zip-sweater/0042608877.html" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Polo Ralph Lauren Cotton Mesh Full-Zip Sweater (Navy Heather)</span>
+<a class="btn buy" href="https://www.ralphlauren.com/men-clothing-sweaters/cotton-full-zip-sweater/0042608877.html" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#4A525A" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-rib-knit-long-sleeve-v-neck-top?ID=26470346&amp;swatchColor=Lauren%20Navy" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Women's Rib-Knit Long-Sleeve V-Neck Top (Lauren Navy)</span>
+<a class="btn buy" href="https://www.macys.com/shop/product/lauren-ralph-lauren-womens-rib-knit-long-sleeve-v-neck-top?ID=26470346&amp;swatchColor=Lauren%20Navy" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb" href="https://www.jcrew.com/p/womens/categories/clothing/sweaters/pullovers/marled-2025-rollnecktrade-sweater/CN250?color_name=blue-navy-ivory-marl" target="_blank" rel="noopener"><img src="images/products/jc_CN250.jpg" alt="J.Crew Marled 2025 Rollneck Sweater (Blue Navy Ivory Marl)" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">J.Crew Marled 2025 Rollneck Sweater (Blue Navy Ivory Marl)</span>
+<a class="btn buy" href="https://www.jcrew.com/p/womens/categories/clothing/sweaters/pullovers/marled-2025-rollnecktrade-sweater/CN250?color_name=blue-navy-ivory-marl" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="color-card">
+<header class="color-head"><span class="big-swatch" style="background:#2D2E30"></span><div><h4>Charcoal</h4><span class="hex">#2D2E30</span></div></header>
+<p class="vibe">Dark charcoal shaker-knit cardigans, double-face unisex sweaters, kids' full-zip jackets, and herringbone coats.</p>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Women / Adult</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#2D2E30" href="https://www.nordstrom.com/s/lauren-ralph-lauren-wool-blend-tweed-coat/8275098" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Designer</span>
+<span class="item-name">Lauren Ralph Lauren Wool Blend Tweed Coat (Grey/Charcoal Herringbone)</span>
+<a class="btn buy" href="https://www.nordstrom.com/s/lauren-ralph-lauren-wool-blend-tweed-coat/8275098" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Girls</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb swatch-thumb" style="background:#2D2E30" href="https://www.target.com/p/girls-39-button-front-cardigan-sweater-cat-38-jack-8482-charcoal-gray-m/-/A-95060336" target="_blank" rel="noopener"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Cat &amp; Jack Girls' Button-Front Shaker Cardigan Sweater (Charcoal Gray)</span>
+<a class="btn buy" href="https://www.target.com/p/girls-39-button-front-cardigan-sweater-cat-38-jack-8482-charcoal-gray-m/-/A-95060336" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Children / Kids</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb" href="https://www.uniqlo.com/us/en/products/E480974-000/00?colorDisplayCode=09&amp;sizeDisplayCode=130" target="_blank" rel="noopener"><img src="images/products/uq_E480974_09.jpg" alt="Uniqlo Kids' DRY Sweat Full-Zip Jacket (Charcoal/Black)" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Uniqlo Kids' DRY Sweat Full-Zip Jacket (Charcoal/Black)</span>
+<a class="btn buy" href="https://www.uniqlo.com/us/en/products/E480974-000/00?colorDisplayCode=09&amp;sizeDisplayCode=130" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+<div class="age-row">
+<div class="age-info"><span class="age-label">Unisex / Adult &amp; Teen</span></div>
+<div class="items">
+<div class="item-row">
+<a class="item-thumb" href="https://www.uniqlo.com/us/en/products/E488758-000/00?colorDisplayCode=09" target="_blank" rel="noopener"><img src="images/products/uq_E488758_09.jpg" alt="Uniqlo Unisex Double-Face Crewneck Sweater (Dark Gray/Black)" loading="lazy"></a>
+<div class="item-body">
+<span class="item-tier">Affordable</span>
+<span class="item-name">Uniqlo Unisex Double-Face Crewneck Sweater (Dark Gray/Black)</span>
+<a class="btn buy" href="https://www.uniqlo.com/us/en/products/E488758-000/00?colorDisplayCode=09" target="_blank" rel="noopener">Shop this piece</a>
+</div>
+</div>
+</div>
+</div>
+</article>
+
 </section>
 <section id="tips">
   <h2>Styling Tips</h2>
@@ -166,15 +1166,15 @@ footer {
   <ul class="tips">
     <li>Anchor the group with one dominant color (e.g. Tan or Warm Cream) and use one accent color (e.g. Midnight Merlot or Vintage Rust) so photos have a shared thread.</li>
     <li>Match twins in complementary tones rather than identical outfits — same palette, different pieces.</li>
-    <li>Keep textures warm and cozy: knits, cardigans, wool coats and cashmere reads soft on camera.</li>
+    <li>Keep textures warm and cozy: knits, cardigans, wool coats and cashmere read soft on camera.</li>
     <li>Let babies and toddlers lean into the softest neutrals (Warm Cream, Tan) — they photograph best in muted tones.</li>
-    <li>Save the metallics (Antique Gold, Champagne, Shimmering Silver) for accessories — scarves, hats, buttons — so they shimmer without overpowering.</li>
+    <li>Save the metallics (Antique Gold, Champagne, Shimmering Silver) for accessories — scarves, hats, jewelry — so they shimmer without overpowering.</li>
   </ul>
 </section>
 </main>
 <footer>
   <p>Built for the Martin family Thanksgiving photo day. Palette: Ralph Lauren Fall 2026.
-  Shop links open retailer searches with the color and item pre-filled — pick the piece you love from the results.</p>
+  75 verified product links across Ralph Lauren, Nordstrom, Macy's, H&amp;M, Uniqlo, Gap, Old Navy, J.Crew and Target.</p>
 </footer>
 </body>
 </html>
